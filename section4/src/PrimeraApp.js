@@ -8,13 +8,32 @@
 //<> </> es otra forma de introducir un <Fragment></Fragment>
 
 //El Stringify es para darle formato a los objetos y <pre></pre> lo hace monospace
-const PrimeraApp = () => {
+/*const PrimeraApp = () => {
 
     const saludo = 'Hola mundo saludo';
     const objeto = {
         name: 'Diego',
         edad: 28
     }
+
+    console.log(props);
+
+    return ( 
+        <>
+            <h1>{saludo}</h1>
+            <pre>{ JSON.stringify(objeto, null , 3) }</pre>
+            <p>Mi Priemera App</p>
+        </> 
+        
+    );
+}
+*/
+
+//El saludo es una prop que se pasa desde el padre al hijo para 
+const PrimeraApp = ( {saludo = 'Hola Mundo'} ) => {
+
+
+    console.log(props);
 
     return ( 
         <>
