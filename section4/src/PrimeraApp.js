@@ -31,13 +31,13 @@ import PropTypes from 'prop-types';
 */
 
 //El saludo es una prop que se pasa desde el padre al hijo para 
-const PrimeraApp = ( {saludo} ) => {
+const PrimeraApp = ( {saludo, subtitulo} ) => {
 
 
     return ( 
         <>
             <h1>{saludo}</h1>
-            <p>Mi Priemera App</p>
+            <p>{subtitulo}</p>
         </> 
         
     );
@@ -45,13 +45,13 @@ const PrimeraApp = ( {saludo} ) => {
 
 //Esto obliga a utilizar las propiedades como se marca aqui.
 //En este caso saludo tiene que ser un string y siempre tiene que ser mandado.
-PrimeraApp.protoTypes = {
-    saludo: PropTypes.string.isRequired,
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string.isRequired
 }
 
 //Es una forma ordenada de darle un valor por defecto sin necesitar ponerlo inline
 PrimeraApp.defaultProps = {
-    saludo: 'Hola Mundo'
+    subtitulo: 'Soy un subtitulo'
 }
 
 export default PrimeraApp; 
